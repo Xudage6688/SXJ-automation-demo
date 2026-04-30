@@ -25,7 +25,7 @@ class MyUser(locust.HttpUser):  # 1.创建locust.HttpUser子类
         acw_tc = c.getini('cookie 4', 'value')
 
         # 构建请求URL和Headers
-        url = 'https://financialleasinguat.volvocars.com.cn/gateway/dragon/report/queryOrderInfo'
+        url = 'https://demo-uat.company.com/gateway/dragon/report/queryOrderInfo'
         headers = {
             "Content-Type": "application/json",
             "Cookie": f"JSESSION={jsession_id}; token=null; acw_tc={acw_tc}"

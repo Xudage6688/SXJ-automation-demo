@@ -301,6 +301,6 @@ class SignProcess(BasePage):
 
 if __name__ == '__main__':
     driver = webdriver.Chrome(options=options)
-    sign = SignProcess(driver, '18780206968', 'Pre')  # 客户手机号
+    sign = SignProcess(driver, '13800138000', 'Pre')  # 客户手机号
     # sign.sign_process()     # 回租客户签约操作
     sign.subscription_sign_process()    # 订阅客户签约操作

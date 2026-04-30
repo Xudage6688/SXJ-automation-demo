@@ -17,7 +17,7 @@ if __name__ == '__main__':
     c = ReadIni(cookie_ini)
     XmindPath = c.getini('xmind', 'xmind_Path')
     CSVPath = c.getini('xmind', 'CSV_Path')
-    VSXJ = c.getini('xmind', 'vsxj')
+    REQ = c.getini('xmind', 'vsxj')
     content = xmindparser.xmind_to_dict(XmindPath)
     node_lists = content[0]['topic']['topics']
     case_list = []
@@ -30,6 +30,6 @@ if __name__ == '__main__':
     delFile(CSVPath)
     for rowlist in case_list:
         for row in rowlist:
-            setattr(row, 'vsxj', VSXJ)
-            addline("D:\项目\沃尔沃\插入应还款数据.csv", row)
+            setattr(row, 'vsxj', REQ)
+            addline("D:\项目\Demo\插入应还款数据.csv", row)
 

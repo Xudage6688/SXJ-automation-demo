@@ -14,7 +14,7 @@ chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 time.sleep(1)
 #用调试模式打开driver对象
 driver = webdriver.Chrome(options=chrome_options)
-driver.get('https://financialleasinguat.volvocars.com.cn/sale-app/view/Layout/home')
+driver.get('https://demo-uat.company.com/sale-app/view/Layout/home')
 driver.find_element(By.XPATH,'//uni-view[text()="提报"]/..').click() #提报元素
 time.sleep(5)
 driver.find_element(By.XPATH,'//uni-view[@class="btn bg"][1]').click()  #第一个去操作

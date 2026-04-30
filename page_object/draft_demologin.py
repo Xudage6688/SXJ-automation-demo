@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
-# @FileName  :draft_sxjlogin.py
+# @FileName  :draft_demologin.py
 # @Time      :2024/1/27 18:23
 # @Author    :Daisy
 """
-封装思享驾主页
+封装Demo融资租赁主页
 
 """
 import time
@@ -18,15 +18,15 @@ from data.path_config import *
 p = ReadIni(data_ini)
 user = p.getini('uat','user')
 pwd = p.getini('uat','password')
-cookie = {'domain': 'financialleasinguat.volvocars.com.cn', 'httpOnly': True, 'name': 'acw_tc', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': '2f624a2a17063629113358470e142f96b56b11a75867d1e021f8126a64ba8c'}
+cookie = {'domain': 'demo-uat.company.com', 'httpOnly': True, 'name': 'acw_tc', 'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': '2f624a2a17063629113358470e142f96b56b11a75867d1e021f8126a64ba8c'}
 p = ReadIni(data_ini)
-url = p.getini('uat', 'sxj_loginUrl')
+url = p.getini('uat', 'demo_loginurl')
 class draftHome(BasePage):
 
     def __init__(self,driver):
         self.driver = driver
         super().__init__(self.driver)
-        self.driver.get(url)    #打开思享驾主页
+        self.driver.get(url)    #打开Demo融资租赁主页
         driver.find_element(By.XPATH, e.ele_userInput).send_keys(user)
         driver.find_element(By.XPATH, e.ele_userPwd).send_keys(pwd)
         time.sleep(8)

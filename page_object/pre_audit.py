@@ -374,8 +374,8 @@ class PreAudit(BasePage):
     # 订阅公户提报
     def subscription_submit_enterprise(self):
         # 提报客户信息
-        self.send_keys('xpath', actual_user, '刘测试')  # 实际用车人
-        self.send_keys('xpath', actual_phone, '18780206968')  # 实际用车人电话
+        self.send_keys('xpath', actual_user, '测试用户')  # 实际用车人
+        self.send_keys('xpath', actual_phone, '13800138000')  # 实际用车人电话
         self.click_button_xpath(save_next_button, 1)  # 保存并下一步
         # 产品信息
         self.click_button_xpath(sub_car_series, 1)  # 车系UAT 选EM 30 PRE选XC60
@@ -588,11 +588,11 @@ class PreAudit(BasePage):
             self.driver.quit()  # 确保WebDriver关闭
 
 if __name__ == '__main__':
-    phone = ['18780206968', '17304468366', '18227038250']
+    phone = ['13800138000', '13900139000', '18227038250']
     options = webdriver.ChromeOptions()
     options.add_experimental_option("mobileEmulation", {"deviceName": "Samsung Galaxy S20 Ultra"})
     # options.add_argument("--auto-open-devtools-for-tabs")
     driver = webdriver.Chrome(options=options)
-    app = PreAudit(driver, '18780206968', 'Uat')  # 客户手机号+环境
+    app = PreAudit(driver, '13800138000', 'Uat')  # 客户手机号+环境
     app.personal_audit()  # 回租
     # app.subscription_preaudit()    # 订阅

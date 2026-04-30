@@ -10,8 +10,8 @@ import requests
 
 from API_test.utils.yaml_util import YamlUtils
 from data.path_config import yaml_path_api
-class TestSxjApi:
-    @pytest.mark.parametrize('args', YamlUtils(yaml_path_api+'/sxj_api.yaml').read_yaml())
+class TestDemoApi:
+    @pytest.mark.parametrize('args', YamlUtils(yaml_path_api+'/demo_api.yaml').read_yaml())
     # @pytest.mark.parametrize('args', YamlUtils('test_api.yaml').read_yaml())
     def test_send_request(self, args):
         url = args['request']['url']

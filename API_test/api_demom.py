@@ -21,7 +21,7 @@ def get_order_detail():
     acw_tc = c.getini('cookie 4', 'value')
 
     # 构建请求URL和Headers
-    url = 'https://financialleasinguat.volvocars.com.cn/gateway/dragon/authApply/getPreOrderHisList'
+    url = 'https://demo-uat.company.com/gateway/dragon/authApply/getPreOrderHisList'
     headers = {
         "Content-Type": "application/json",
         "Cookie": f"JSESSION={jsession_id}; token=null; acw_tc={acw_tc};XXL_JOB_LOGIN_IDENTITY=${XXL_JOB_LOGIN_IDENTITY}"  # 从环境变量或配置文件读取

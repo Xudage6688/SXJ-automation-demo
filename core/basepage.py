@@ -244,7 +244,7 @@ import os
 from data.path_config import log_path
 
 class CustomLogging:
-    def __init__(self, name='custom_logger', log_file=os.path.join(log_path, 'sxj_log.txt'), level=logging.INFO):
+    def __init__(self, name='custom_logger', log_file=os.path.join(log_path, 'demo_log.txt'), level=logging.INFO):
         # 创建一个logger实例
         self.logger = logging.getLogger(name)
         self.logger.setLevel(level)
@@ -294,7 +294,7 @@ if __name__ == '__main__':
     # for i in config:
     #     print(i)
     # 使用示例
-    custom_log = CustomLogging('sxj_logging', 'sxj.API_test', logging.DEBUG)
+    custom_log = CustomLogging('demo_logging', 'demo.API_test', logging.DEBUG)
     logger = custom_log.get_logger()
 
     # 记录不同级别的日志信息

@@ -1,5 +1,5 @@
 [project]
-name = "sxj-automation-demo"
+name = "demo-automation-framework"
 version = "1.0.0"
 description = "金融业务全栈自动化测试框架 - 支持 Web UI 自动化与 API 接口测试"
 readme = "README.md"
@@ -44,9 +44,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Xudage6688/SXJ-automation-demo"
-Repository = "https://github.com/Xudage6688/SXJ-automation-demo"
-Documentation = "https://github.com/Xudage6688/SXJ-automation-demo#readme"
+Homepage = "https://github.com/example/demo-automation-framework"
+Repository = "https://github.com/example/demo-automation-framework"
+Documentation = "https://github.com/example/demo-automation-framework#readme"
 
 [build-system]
 requires = ["setuptools>=61.0"]

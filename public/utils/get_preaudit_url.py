@@ -99,8 +99,8 @@ def get_PrePreaudit_url(phone):
 
 
 if __name__ == '__main__':
-    get_UatPreaudit_url('18780206968')  # 客户手机号
-    url = get_UatPreaudit_url('18780206968')  # 客户手机号
+    get_UatPreaudit_url('13800138000')  # 客户手机号
+    url = get_UatPreaudit_url('13800138000')  # 客户手机号
     print(url)
     # get_PrePreaudit_url('18129999999')  # 客户手机号
 

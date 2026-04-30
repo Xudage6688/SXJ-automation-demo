@@ -2,7 +2,7 @@
 # @FileName  :submit_order.py
 # @Time      :2024/3/4 17:46
 # @Author    :Daisy
-# @Brief Introduction    :思享驾提报
+# @Brief Introduction    :Demo融资租赁提报
 # 1.用cmd：C:\Users\Xu\AppData\Local\Google\Chrome\Application\chrome.exe
 # --remote-debugging-port=9222 --user-data-dir="D:\selenium\AutomationProfile\selenium"
 # 打开浏览器调试模式， 目录后放selenium驱动
@@ -150,7 +150,7 @@ config = {
 }
 driver_photo = os.path.join(testData_path, '测试驾照.jpg')  # 驾照路径
 license_photo = os.path.join(testData_path, '营业执照2.jpg')  # 驾照路径
-log_file_path = os.path.join('log_path', 'sxj.log')
+log_file_path = os.path.join('log_path', 'demo.log')
 
 
 class SubmitOrder(BasePage):
@@ -160,9 +160,9 @@ class SubmitOrder(BasePage):
         self.driver = driver
         super().__init__(self.driver)
         if env == 'Uat':
-            self.home_page = p.getini('uat', 'sxj_app_home')
+            self.home_page = p.getini('uat', 'demo_app_home')
         elif env == 'Pre':
-            self.home_page = p.getini('pre', 'sxj_app_home')
+            self.home_page = p.getini('pre', 'demo_app_home')
 
         else:
             raise ValueError("Invalid env. Only 'Uat' and 'Pre' are supported.")
@@ -400,7 +400,7 @@ class SubmitOrder(BasePage):
         self.click_button_xpath(config['legal_residential_address'], 1)  # 现居住地址
         self.click_button('xpath', config['general_complete'], 1)  # 通用完成按钮
         self.send_keys('xpath', config['legal_address_detail'], '法人现居住地址', 3)  # 法人现居住地址
-        self.send_keys('xpath', config['unit_name'], '上海思享驾', 3)  # 单位名称
+        self.send_keys('xpath', config['unit_name'], '上海Demo公司', 3)  # 单位名称
         time.sleep(2)
         self.click_button('xpath', config['company_item'], 1)
         self.send_keys('xpath', config['unit_phone'], '6802888')  # 单位电话
@@ -514,8 +514,8 @@ if __name__ == '__main__':
     # sub = SubmitOrder(driver, 'Uat')  # Uat & Pre环境切换
     # sub.order_submit_personal()  # 个人单纯提报
     # sub.order_submit_enterprise()  # 企业单纯提报
-    # sub.personal_order_process('18780206968')  # 个人创单+预审+提报+审核
-    # sub.enterprise_order_process('18780206968')  # 企业创单+预审+提报+审核
+    # sub.personal_order_process('13800138000')  # 个人创单+预审+提报+审核
+    # sub.enterprise_order_process('13800138000')  # 企业创单+预审+提报+审核
 
     # #
     # # 重复提报
@@ -524,8 +524,8 @@ if __name__ == '__main__':
     for _ in range(num_of_repetitions):
         driver = webdriver.Chrome(options=chrome_options)  # 用调试模式打开driver对象
         sub = SubmitOrder(driver, 'Pre')  # Uat & Pre环境切换
-        # result = sub.personal_order_process('18780206968')   # 创单+预审+提报+审核
-        result = sub.enterprise_order_process('18780206968')   # 创单+预审+提报+审核
+        # result = sub.personal_order_process('13800138000')   # 创单+预审+提报+审核
+        result = sub.enterprise_order_process('13800138000')   # 创单+预审+提报+审核
         # 可在此处根据result添加判断逻辑或日志记录
         if result:
             logger.info("创单执行成功")

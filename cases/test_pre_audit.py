@@ -16,7 +16,7 @@ class TestPreAudit:
         options.add_experimental_option("mobileEmulation", {"deviceName": "Samsung Galaxy S20 Ultra"})
         # options.add_argument("--auto-open-devtools-for-tabs")
         self.driver = webdriver.Chrome(options=options)  # 用调试模式打开driver对象
-        self.cust_phone = '18780206968'
+        self.cust_phone = '13800138000'
         self.env = 'Uat'
         self.preaudit = PreAudit(self.driver,self.cust_phone, self.env)
 

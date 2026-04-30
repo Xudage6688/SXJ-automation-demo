@@ -166,7 +166,7 @@ class Template_mixin(object):
         2: '错误',
     }
 
-    DEFAULT_TITLE = 'SXJ自动化测试报告'
+    DEFAULT_TITLE = 'Demo自动化测试报告'
     DEFAULT_DESCRIPTION = ''
     DEFAULT_TESTER = 'Daisy'
 

@@ -21,7 +21,7 @@ time.sleep(1)
 p = ReadIni(data_ini)
 user = p.getini('uat', 'user')
 pwd = p.getini('uat', 'password')
-url = p.getini('uat', 'sxj_loginUrl')
+url = p.getini('uat', 'demo_loginurl')
 ele_user = p.getini('uat', 'user')
 ele_pwd = p.getini('uat', 'password')
 approve_center = p.getini('ele', 'approve_center')
@@ -62,7 +62,7 @@ class ApprovalProcess(BasePage):
         self.driver = driver
         super().__init__(self.driver)
         if env == 'Uat':
-            home_page = p.getini('uat', 'sxj_homepage')
+            home_page = p.getini('uat', 'demo_homepage')
             self.iframe_transfer = p.getini('uat', 'iframe_transfer')
             self.iframe_phone_approve = p.getini('uat', 'iframe_phone_approve')
             self.iframe_audit_approve = p.getini('uat', 'iframe_audit_approve')
@@ -70,7 +70,7 @@ class ApprovalProcess(BasePage):
             self.add_material = '是'    # 是否加收材料
 
         elif env == 'Pre':
-            home_page = p.getini('pre', 'sxj_homepage')
+            home_page = p.getini('pre', 'demo_homepage')
             self.iframe_transfer = p.getini('pre', 'iframe_transfer')
             self.iframe_phone_approve = p.getini('pre', 'iframe_phone_approve')
             self.iframe_audit_approve = p.getini('pre', 'iframe_audit_approve')
@@ -82,7 +82,7 @@ class ApprovalProcess(BasePage):
 
         self.env = env  # 存储env变量
         self.home_page = home_page  # 存储主页URL
-        self.get_url(home_page)  # 打开sxj主页
+        self.get_url(home_page)  # 打开demo主页
         time.sleep(3)
         if self.is_element_exist('xpath', login_error):  # 针对未登录场景处理
             self.send_keys('xpath', ele_user, user, 3)  # 浏览器已记录用户账号密码的可注释该两步操作，直接手动输入验证码
@@ -90,7 +90,7 @@ class ApprovalProcess(BasePage):
             # 手动输入验证码
             approve_center_locator = ('xpath', approve_center)
             self.wait_until_present(approve_center_locator, 10)
-            loger.info("sxj主页登录完成，请重新运行程序")
+            loger.info("demo主页登录完成，请重新运行程序")
 
         else:
             approve_center_locator = ('xpath', approve_center)
@@ -201,7 +201,7 @@ class ApprovalProcess(BasePage):
         # 转件操作
         self.click_button_xpath(transfer_checkbox, 1)  # 信审转件checkbox
         self.click_button_xpath(transfer_button, 1)  # 转件按钮
-        self.click_button_xpath(self.transfer_staff, 1)  # 转件处理人：刘旭
+        self.click_button_xpath(self.transfer_staff, 1)  # 转件处理人：测试审批人
         self.click_button_xpath(transfer_confirm, 1)  # 转件确定
         self.uniframe()
 
@@ -222,8 +222,8 @@ class ApprovalProcess(BasePage):
                     # 信审转件操作
                     self.click_button_xpath(query_button)
                     if not self.is_element_exist('xpath', no_data_ele):
-                        # 如果找到了订单信息，则跳出循环进行转件给审核员刘测试可在data.ini文件中修改 transfer_staff
-                        if self.is_element_exist('xpath', handler):  # 当前处理人是刘旭时候，进行审核操作,不是则转件
+                        # 如果找到了订单信息，则跳出循环进行转件给审核员测试用户可在data.ini文件中修改 transfer_staff
+                        if self.is_element_exist('xpath', handler):  # 当前处理人是测试审批人时候，进行审核操作,不是则转件
                             self.uniframe()
                             self.pre_audit_process(order_num)
                             if self.is_element_exist('xpath', no_data_ele):  # 查无数据即开始电审流程

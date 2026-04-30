@@ -51,9 +51,9 @@ class RequestPayout(BasePage):
         self.driver = driver
         super().__init__(self.driver)
         if env == 'Uat':
-            home_page = p.getini('uat', 'sxj_app_home')
+            home_page = p.getini('uat', 'demo_app_home')
         elif env == 'Pre':
-            home_page = p.getini('pre', 'sxj_app_home')
+            home_page = p.getini('pre', 'demo_app_home')
         else:
             raise ValueError("Invalid env. Only 'Uat' and 'Pre' are supported.")
 

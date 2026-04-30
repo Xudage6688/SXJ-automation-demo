@@ -2,7 +2,7 @@
 # @FileName  :sign_order.py
 # @Time      :2024/3/8 14:02
 # @Author    :Daisy
-# @Brief Introduction    :思享驾签约流程
+# @Brief Introduction    :Demo融资租赁签约流程
 # 1.用cmd：C:\Users\Xu\AppData\Local\Google\Chrome\Application\chrome.exe
 # --remote-debugging-port=9222 --user-data-dir="D:\selenium\AutomationProfile\selenium"
 # 打开浏览器调试模式， 目录后放selenium驱动

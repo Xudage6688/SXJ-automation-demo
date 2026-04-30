@@ -21,7 +21,7 @@ class rowInCSV:
         self.step=""
         self.excepted_result=""
 
-filePath = 'D:\项目\沃尔沃\需求\订阅-扣收定金.xmind'
+filePath = 'D:\项目\Demo\需求\订阅-扣收定金.xmind'
 
 
 
@@ -80,21 +80,21 @@ if __name__ == '__main__':
         rowslist = []
         step=[]
         case_list.append(read_node(node_list,rowslist,module,step))
-    delFile("D:\项目\沃尔沃\插入应还款数据.csv")
-    delFile("D:\项目\沃尔沃\系统自动发盘.csv")
-    delFile("D:\项目\沃尔沃\手动重新扣款.csv")
-    delFile("D:\项目\沃尔沃\场景.csv")
+    delFile("D:\项目\Demo\插入应还款数据.csv")
+    delFile("D:\项目\Demo\系统自动发盘.csv")
+    delFile("D:\项目\Demo\手动重新扣款.csv")
+    delFile("D:\项目\Demo\场景.csv")
     for rowlist in case_list:
         for row in rowlist:
             if row.module == "插入应还款数据":
-                setattr(row, 'vsxj', 'VSXJ-6965')
-                addline("D:\项目\沃尔沃\插入应还款数据.csv", row)
+                setattr(row, 'vsxj', 'REQ-6965')
+                addline("D:\项目\Demo\插入应还款数据.csv", row)
             elif row.module == "系统自动发盘":
-                setattr(row, 'vsxj', 'VSXJ-6476')
-                addline("D:\项目\沃尔沃\系统自动发盘.csv", row)
+                setattr(row, 'vsxj', 'REQ-6476')
+                addline("D:\项目\Demo\系统自动发盘.csv", row)
             elif row.module == "手动重新扣款":
-                setattr(row, 'vsxj', 'VSXJ-6477')
-                addline("D:\项目\沃尔沃\手动重新扣款.csv", row)
+                setattr(row, 'vsxj', 'REQ-6477')
+                addline("D:\项目\Demo\手动重新扣款.csv", row)
             else:
-                setattr(row, 'vsxj', 'VSXJ-7021')
-                addline("D:\项目\沃尔沃\场景.csv", row)
+                setattr(row, 'vsxj', 'REQ-7021')
+                addline("D:\项目\Demo\场景.csv", row)

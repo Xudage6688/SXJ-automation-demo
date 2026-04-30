@@ -49,7 +49,7 @@ def getUatCookie():
     u = ReadIni(data_ini)
     user = u.getini('uat', 'user')  # dataini # 进行参数配置
     pwd = u.getini('uat', 'password')
-    url = u.getini('uat', 'sxj_loginUrl')
+    url = u.getini('uat', 'demo_loginurl')
     ele_user = u.getini('uat', 'ele_userInput')
     ele_pwd = u.getini('uat', 'ele_userPwd')
     driver = get_webdriver()
@@ -88,7 +88,7 @@ def getPreCookie():
     u = ReadIni(data_ini)
     user = u.getini('pre', 'user')
     pwd = u.getini('pre', 'password')
-    url = u.getini('pre', 'sxj_loginUrl')
+    url = u.getini('pre', 'demo_loginurl')
     ele_user = u.getini('pre', 'ele_userInput')
     ele_pwd = u.getini('pre', 'ele_userPwd')
     driver = get_webdriver()

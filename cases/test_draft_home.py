@@ -7,8 +7,8 @@
 # import allure
 # import pytest
 # from selenium import  webdriver
-# from page_object.draft_sxjlogin import draftHome
-# @allure.feature("测试思享驾查询中心")
+# from page_object.draft_demologin import draftHome
+# @allure.feature("测试Demo融资租赁查询中心")
 # class TestDraftHome:
 #     def setup_class(self):
 #         self.driver = webdriver.Chrome()

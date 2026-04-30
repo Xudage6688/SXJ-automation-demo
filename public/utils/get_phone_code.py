@@ -54,6 +54,6 @@ def getCode(phone):
 
 
 if __name__ == '__main__':
-    phone = ['17304468366','13311116666']
-    numbers = getCode('17304468366')
+    phone = ['13900139000','13311116666']
+    numbers = getCode('13900139000')
     print(numbers)

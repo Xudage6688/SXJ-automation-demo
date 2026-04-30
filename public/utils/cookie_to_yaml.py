@@ -36,15 +36,15 @@ def format_cookie(cookies):
 
 
 # 假设你已经有了cookies数据
-cookies = [{'domain': 'financialleasinguat.volvocars.com.cn', 'expiry': 1715736837, 'httpOnly': False, 'name': 'token',
+cookies = [{'domain': 'demo-uat.company.com', 'expiry': 1715736837, 'httpOnly': False, 'name': 'token',
             'path': '/', 'sameSite': 'Lax', 'secure': False, 'value': 'null'},
-           {'domain': 'financialleasinguat.volvocars.com.cn', 'expiry': 1715736837, 'httpOnly': False,
+           {'domain': 'demo-uat.company.com', 'expiry': 1715736837, 'httpOnly': False,
             'name': 'JSESSION', 'path': '/', 'sameSite': 'Lax', 'secure': False,
             'value': 'owODctAwlZtgO0n4pCUONdp3iFvHHWggl5FcFM9z1JM='},
-           {'domain': 'financialleasinguat.volvocars.com.cn', 'expiry': 1715650494, 'httpOnly': False,
+           {'domain': 'demo-uat.company.com', 'expiry': 1715650494, 'httpOnly': False,
             'name': 'RANDOM_CODE', 'path': '/', 'sameSite': 'Lax', 'secure': False,
             'value': '4b6319f2-a784-41e3-9a48-a7061a92a0ae'},
-           {'domain': 'financialleasinguat.volvocars.com.cn', 'expiry': 1715652233, 'httpOnly': True, 'name': 'acw_tc',
+           {'domain': 'demo-uat.company.com', 'expiry': 1715652233, 'httpOnly': True, 'name': 'acw_tc',
             'path': '/', 'sameSite': 'Lax', 'secure': False,
             'value': '2f624a1617156504342131570e5f9d3d29c362c3df36782be234d314680af5'}]
 
@@ -68,7 +68,7 @@ yaml_content = read_yaml.read_yaml()
 #         for item in data:
 #             replace_cookie_in_data(item, new_cookie)
 #
-# # cookie_new = "JSESSION=owODctAwlZtgO0n4pCUONdp3iFvHHWggl5FcFM9z1JM=; acw_tc=2f624a1617156504342131570e5f9d3d29c362c3df36782be234d314680af5"
+# # cookie_new = "JSESSION=<TOKEN_PLACEHOLDER>; acw_tc=<TOKEN_PLACEHOLDER>"
 # cookie_new = "JSESSION=123; acw_tc=888"
 #
 # # 替换所有出现的Cookie值

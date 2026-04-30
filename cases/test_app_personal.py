@@ -23,12 +23,12 @@ class TestSubmitOrder:
         self.sub = SubmitOrder(self.driver, 'Uat')  # Uat & Pre环境切换
 
     @allure.story("创单+预审+提报+审核")
-    @pytest.mark.parametrize('cust_phone', ['18780206968'])
+    @pytest.mark.parametrize('cust_phone', ['13800138000'])
     @pytest.mark.smoke
     def test_appSubmit(self, cust_phone):
         self.sub.personal_order_process(cust_phone)  # 创单+预审+提报+审核
 
-    @pytest.mark.parametrize('cust_phone', ['18780206968'])
+    @pytest.mark.parametrize('cust_phone', ['13800138000'])
     @pytest.mark.personalOrder
     def test_order_generate_personal(self, cust_phone):  # 创建个人预审单+预审
         self.sub.order_generate_personal(cust_phone)
@@ -37,7 +37,7 @@ class TestSubmitOrder:
     def test_submit_alone(self):  # 个人单独提报功能
         self.sub.order_submit_personal()
 
-    @pytest.mark.parametrize('cust_phone', ['18780206968'])
+    @pytest.mark.parametrize('cust_phone', ['13800138000'])
     def test_order_generate_personal(self, cust_phone):  # 创建个人预审单
         self.sub.order_generate_personal(cust_phone)
 

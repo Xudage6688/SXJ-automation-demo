@@ -2,7 +2,7 @@
 # @FileName  :initoyaml.py
 # @Time      :2024/5/13 17:31
 # @Author    :Daisy
-# @Brief Introduction    : 把思享驾服的cookie写到sxj_api.yaml里
+# @Brief Introduction    : 把Demo融资租赁服的cookie写到demo_api.yaml里
 import configparser
 import yaml
 from data.path_config import cookie_ini, yaml_path

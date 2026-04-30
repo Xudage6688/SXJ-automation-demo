@@ -288,7 +288,7 @@ class SubscriptionApp(BasePage):
 
 if __name__ == '__main__':
     driver = webdriver.Chrome(options=chrome_options)  # 用调试模式打开driver对象
-    sub = SubscriptionApp(driver, 'Pre', '18780206968')  # Uat & Pre环境切换+客户手机号
+    sub = SubscriptionApp(driver, 'Pre', '13800138000')  # Uat & Pre环境切换+客户手机号
     sub.order_submit_personal()  # APP创单个人单到客户授权到APP提交
     # sub.order_submit_enterprise()  # APP创单企业单到客户授权到APP提交
     # sub.order_submit()  # 单纯提报提交订阅单
@@ -298,7 +298,7 @@ if __name__ == '__main__':
     #
     # for _ in range(num_of_repetitions):
     #     driver = webdriver.Chrome(options=chrome_options)  # 用调试模式打开driver对象
-    #     sub = SubscriptionApp(driver, 'Uat', '18780206968')  # Uat & Pre环境切换+客户手机号
+    #     sub = SubscriptionApp(driver, 'Uat', '13800138000')  # Uat & Pre环境切换+客户手机号
     #     result = sub.order_submit_personal()  # APP创单到客户授权到APP提交
     #     # 可在此处根据result添加判断逻辑或日志记录
     #     if result:

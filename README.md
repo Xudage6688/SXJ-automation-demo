@@ -1,11 +1,11 @@
-# SXJ 自动化测试框架
+# Demo 自动化测试框架
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![Selenium](https://img.shields.io/badge/Selenium-4.x-green)](https://www.selenium.dev/)
 [![pytest](https://img.shields.io/badge/pytest-7.x-orange)](https://pytest.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-> 金融业务全栈自动化测试框架 - 支持 Web UI 自动化与 API 接口测试
+> 某车企金融业务全栈自动化测试框架 - 支持 Web UI 自动化与 API 接口测试
 
 ## 项目亮点
 
@@ -52,7 +52,7 @@
 ## 目录结构
 
 ```
-SXJ-automation-demo/
+demo-automation/
 ├── cases/              # 测试用例
 │   ├── test_subscription.py      # 订阅业务测试
 │   ├── test_pre_audit.py         # 预审流程测试
@@ -102,7 +102,7 @@ SXJ-automation-demo/
 
 ```bash
 # 克隆项目
-git clone https://github.com/Xudage6688/SXJ-automation-demo.git
+git clone https://github.com/example/demo-automation.git
 
 # 创建虚拟环境
 python -m venv .venv

@@ -8,7 +8,7 @@
 
 from data.path_config import *
 from configparser import ConfigParser
-data_ini =os.path.join(os.path.abspath(data_path), 'data.ini')  #拿到思享驾 data.ini文件的路径
+data_ini =os.path.join(os.path.abspath(data_path), 'data.ini')  #拿到 data.ini文件的路径
 
 
 # p = configparser.ConfigParser()
@@ -17,13 +17,13 @@ data_ini =os.path.join(os.path.abspath(data_path), 'data.ini')  #拿到思享驾
 # 方法2 引用路径法
 # p.read(data_ini,encoding='utf-8')
 # phone_url = p.get('uat','phone_url')
-# sxj_loginUrl = p.get('uat','sxj_loginUrl')
-# sxj_homePage = p.get('uat','sxj_homePage')
+# demo_loginurl = p.get('uat','demo_loginurl')
+# demo_homepage = p.get('uat','demo_homepage')
 # user = p.get('uat','user')
 # password = p.get('uat','password')
 # account = p.get('uat','ele_userInput')
 # pwd = p.get('uat','ele_userPwd')
-# print(phone_url,sxj_loginUrl,sxj_homePage,user,password)
+# print(phone_url,demo_loginurl,demo_homepage,user,password)
 
 class ReadIni(ConfigParser):
     def __init__(self, filename: object) -> object:

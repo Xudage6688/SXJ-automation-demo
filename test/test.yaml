@@ -2,13 +2,13 @@
   request:
     headers:
       Content-type: application/json
-      Cookie: JSESSION=owODctAwlZtgO0n4pCUONZIQrl/P5ffI1QRER6yzeA8=; acw_tc=707c9fde17156593134074632e2595f127f94cc74bf2ee1085fbab37bb892a
+      Cookie: JSESSION=<TOKEN_PLACEHOLDER>; acw_tc=<TOKEN_PLACEHOLDER>
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0
     method: GET
     params:
       code: 0
-    url: https://financialleasinguat.volvocars.com.cn/gateway/dragon/order/cust/enterpriseLicenseDetail/7411766174
+    url: https://demo-uat.company.com/gateway/dragon/order/cust/enterpriseLicenseDetail/7411766174
   validate:
   - eq:
       code: 0
@@ -16,7 +16,7 @@
   request:
     headers:
       Content-type: application/json
-      Cookie: JSESSION=owODctAwlZtgO0n4pCUONZIQrl/P5ffI1QRER6yzeA8=; acw_tc=707c9fde17156593134074632e2595f127f94cc74bf2ee1085fbab37bb892a
+      Cookie: JSESSION=<TOKEN_PLACEHOLDER>; acw_tc=<TOKEN_PLACEHOLDER>
       User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
         like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0
     method: POST
@@ -39,7 +39,7 @@
       productCode: ''
       retailPlatformBizNo: ''
       stageCode: ''
-    url: https://financialleasinguat.volvocars.com.cn/gateway/dragon/report/queryOrderInfo
+    url: https://demo-uat.company.com/gateway/dragon/report/queryOrderInfo
   validate:
   - eq:
       code: 0

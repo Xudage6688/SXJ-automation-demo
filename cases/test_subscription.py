@@ -22,7 +22,7 @@ class TestSubscriptionApp(TestCase):
         time.sleep(1)
         self.driver = webdriver.Chrome(options=chrome_options)
         self.env = 'Uat'
-        self.cust_phone = '18780206968'
+        self.cust_phone = '13800138000'
         self.subscription_app = SubscriptionApp(self.driver, self.env, self.cust_phone)
 
     def tearDown(self):
@@ -43,7 +43,7 @@ class TestSubscriptionApp(TestCase):
         options = webdriver.ChromeOptions()
         options.add_experimental_option("mobileEmulation", {"deviceName": "Samsung Galaxy S20 Ultra"})
         driver = webdriver.Chrome(options=options)
-        app = PreAudit(driver, '18780206968', 'Uat')  # 客户手机号+环境
+        app = PreAudit(driver, '13800138000', 'Uat')  # 客户手机号+环境
         app.subscription_preaudit()  # 订阅
         time.sleep(2)
         driver.quit()

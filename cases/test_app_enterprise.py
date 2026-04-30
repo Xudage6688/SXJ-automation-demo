@@ -22,11 +22,11 @@ class TestSubmitOrder:
 
     @allure.story("创单+预审+提报+审核")
     @pytest.mark.smoke
-    @pytest.mark.parametrize('cust_phone', ['18780206968'])
+    @pytest.mark.parametrize('cust_phone', ['13800138000'])
     def test_appSubmit(self, cust_phone):
         self.sub.enterprise_order_process(cust_phone)  # 创单+预审+提报+审核
 
-    @pytest.mark.parametrize('cust_phone', ['18780206968'])
+    @pytest.mark.parametrize('cust_phone', ['13800138000'])
     def test_order_generate_personal(self, cust_phone):  # 创建企业预审单
         self.sub.order_generate_enterprise(cust_phone)
 

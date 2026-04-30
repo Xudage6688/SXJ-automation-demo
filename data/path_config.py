@@ -23,7 +23,7 @@ pathConfig_path = os.path.join(path, 'path_config')  # 路径目录
 
 utils_path = os.path.join(path, 'public', 'utils')  # utils目录
 
-SXJ_path = os.path.join(path, 'SXJ_Test')  # sxj目录
+DEMO_path = os.path.join(path, 'DEMO_Test')  # demo目录
 
 temp_path = os.path.join(path, 'temp')  # 临时目录
 
@@ -43,4 +43,4 @@ api_path = os.path.join(path, 'API_test')
 
 yaml_path_api = os.path.join(api_path, 'test_cases')  # yaml api目录
 
-yaml_path = os.path.join(os.path.abspath(yaml_path_api), 'sxj_api.yaml')
+yaml_path = os.path.join(os.path.abspath(yaml_path_api), 'demo_api.yaml')
